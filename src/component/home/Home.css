@@ -1,0 +1,141 @@
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+}
+
+.home-page {
+    min-height: 100vh;
+    background: #e0d0ff;
+    color: black;
+    padding: 30px 50px;
+}
+
+.home-item {
+    margin: 15px 0px;
+}
+
+.home-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.my-product-button {
+    appearance: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: white;
+    background-color: #743DE2;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0;
+    transition: 0.5s;
+}
+
+.my-product-button:hover {
+    background-color: #9a7cd8;
+}
+
+.view-button {
+    cursor: pointer;
+    appearance: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #e0d0ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.7%;
+}
+
+.view-button img {
+    width: 32px;
+}
+
+.home-page-status p {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.home-short-item {
+    display: none;
+}
+
+.home-long-item {
+    display: block;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+
+.search-bar {
+    background-color: #fffafa;
+    color: rgb(43, 43, 43);
+    width: 100%;
+    border-radius: 20px;
+    border: none;
+    font-size: 20px;
+    color: black;
+    padding: 10px 20px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.search-bar:focus {
+    outline: none;
+}
+
+.loading-container {
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding-top: 100px;
+}
+
+.loading-btn {
+    width: 200px;
+    height: 200px;
+}
+
+.npy-container {
+    width: 100%;
+    min-height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media only screen and (max-width: 1200px){
+    .search-bar {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    .home-long-item {
+        display: none;
+    }
+    .home-short-item {
+        display: block;
+    }
+    .home-page {
+        margin-top: 45px;
+    }
+    .home-item {
+        margin: 10px 0px;
+    }
+    .search-bar{
+        width: 100%;
+        font-size: 14px;
+    }
+    
+}

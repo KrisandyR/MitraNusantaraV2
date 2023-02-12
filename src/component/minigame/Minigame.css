@@ -1,0 +1,86 @@
+.mg-page {
+    background: #e0d0ff;
+    min-height: 100vh;
+    padding: 30px 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mg-part {
+    margin: 20px 0px;
+}
+
+.mg-title {
+    font-size: 32px;
+}
+
+.mg-coin-list {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+}
+
+.coin-value {
+    font-size: 28px;
+    color: rgb(0, 0, 0);
+}
+
+
+.coin-img {
+    width: 100px;
+}
+
+.mg-coin-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.game-status {
+    margin-top: 20px;
+    font-size: 24px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.neutral-img-container {
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.neutral-img-container:hover {
+    opacity: 0.6;
+}
+
+.coin-won-img {
+    position: absolute;
+    width: 80px;
+    top: 20%;
+    left: 22%;
+    z-index: 1;
+}
+
+.won-img-container {
+    position: relative;
+}
+
+.reset-btn {
+    appearance: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 20px;
+    color: white;
+    background-color: #743DE2;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0;
+    transition: 0.5s;
+}
+
+@media only screen and (max-width: 950px){
+    .mg-page {
+        margin-top: 45px;
+    }
+}

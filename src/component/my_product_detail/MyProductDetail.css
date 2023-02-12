@@ -1,0 +1,267 @@
+
+
+.product-detail {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.product-buy-status {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    z-index: 5;
+}
+
+.product-outer {
+    z-index: 2;
+    width: 100%;
+    height: 200%;
+    position: fixed;
+    background-color: black;
+    opacity: 0.2;
+}
+
+.product-outer-2 {
+    z-index: 6;
+    width: 100%;
+    height: 200%;
+    position: fixed;
+    background-color: black;
+    opacity: 0.2;
+}
+
+.product-detail-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 70vh;
+    max-height: fit-content;
+}
+
+.buy-status-card {
+    margin-top: 200px;
+    margin-bottom: 100px;
+    padding: 45px 45px;
+    z-index: 7;
+    position: sticky;
+    width: 40%;
+
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.product-detail-card {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 45px 45px;
+    z-index: 3;
+    position: sticky;
+    width: 70%;
+
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.pd-info {
+    display: flex;
+}
+
+.pd-img-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 20px 0px;
+    margin-right: 45px;
+    min-height: 375px;
+    min-width: 375px;
+    gap: 30px;
+}
+
+.pd-img {
+    max-height: 375px;
+    max-width: 375px
+}
+
+.pd-text-container {
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.pd-title {
+    font-size: 32px;
+}
+
+.pd-rating-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.pd-star-icon {
+    max-width: 24px;
+    max-height: 24px;
+}
+
+.pd-rating {
+    font-size: 20px;
+}
+
+.pd-desc {
+    font-size: 18px;
+}
+
+.pd-price {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 44px;
+}
+
+.pd-star-coin {
+    max-width: 64px;
+    max-height: 64px;
+}
+
+.pd-button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 25px;
+}
+
+.pd-btn-buy {
+    appearance: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 50px;
+    font-size: 28px;
+    color: white;
+    background-color: #743DE2;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0;
+    transition: 0.5s;
+}
+
+.pd-btn-buy:hover {
+    background-color: #9a7cd8;
+}
+
+.pd-btn-close {
+    z-index: 4;
+    appearance: none;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    color: white;
+    background-color: red;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0;
+    transition: 0.5s;
+    padding: 10px 20px;
+    width: fit-content;
+    height: fit-content;
+    margin-top: 100px;
+}
+
+.buy-status-container {
+    min-height: 15vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+}
+
+.buy-status-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.success-status {
+    font-size: 36px;
+}
+
+.buy-status-btn {
+        appearance: none;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 50px;
+    font-size: 28px;
+    color: white;
+    background-color: #743DE2;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.2) 0 1px 3px 0;
+    transition: 0.5s;
+}
+
+.success-desc {
+    font-size: 20px;
+}
+
+@media only screen and (max-width: 1200px){
+    .pd-img-container {
+        margin-right: 30px;
+        min-height: 275px;
+        min-width: 275px;
+    }
+    .buy-status-card{
+        width: 60%;
+    }
+    
+    .pd-img {
+        max-height: 275px;
+        max-width: 275px
+    }
+    .pd-title {
+        font-size: 22px;
+    }
+    .pd-desc {
+        font-size: 16px;
+    }
+    .pd-price {
+        font-size: 24px;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .pd-img-container {
+        margin-right: 30px;
+        min-height: 225px;
+        min-width: 225px;
+    }
+    
+    .pd-img {
+        max-height: 225px;
+        max-width: 225px
+    }
+}
+
+@media only screen and (max-width: 950px){
+    .product-detail-card {
+        margin-top: 35px;
+        margin-bottom: 35px;
+    }
+    .buy-status-card{
+        width: 75%;
+    }
+    .pd-btn-close {
+        margin-top: 35px;
+    }
+    .pd-info {
+        flex-direction: column;
+    }
+}

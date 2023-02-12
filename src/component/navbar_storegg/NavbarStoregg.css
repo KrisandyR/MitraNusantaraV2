@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Roboto:wght@400;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    font-family: 'Poppins';
+    color:  black;
+}
+
+header {
+    width: 100%;
+    /* height: fit-content; */
+    background-color: #743DE2;
+    display: flex;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+.logo {
+    background-color: #743DE2;
+    border: none;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    padding-right: 30px;
+    cursor: pointer;
+}
+
+
+.logo img {
+    width: 100px;
+}
+
+.logo h1 {
+    color: gold;
+}
+
+nav {
+    width: 100%;
+}
+
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    gap: 30px;
+}
+
+nav li {
+    display: flex;
+    align-items: center;
+}
+
+.nav-item {
+    width: max-content;
+    display: block;
+    margin: 0 15px;
+}
+
+.profile {
+    width: 48px;
+}
+
+.star-coin {
+    width: 28px;
+}
+
+.balance-container {
+    width: 100%;
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.balance-container p {
+    width: max-content;
+    color: gold;
+}
+
+@media only screen and (max-width: 1200px){
+    header {
+        padding: 5px 20px;
+    }
+    nav ul {
+        gap: 15px;
+    }
+}
+
+@media only screen and (max-width: 950px){
+    header {
+        padding: 5px 15px;
+        justify-content: center;
+    }
+    nav {
+        height: 65px;
+        position: absolute;
+        top: 110px;
+        left: 0;
+        right: 0;
+        width: 100vw;
+        background: #8b5ceb;
+        padding-bottom: 15px;
+    }
+    nav ul {
+        display: block;
+        margin: 15px 30px 15px 30px;
+        text-align: center;
+    }
+    nav ul li {
+        width: 100%;
+        height: fit-content;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .nav-item {
+        margin: 5px 0px;
+        display: flex;
+        align-items: center;
+    }
+    .balance-container {
+        font-size: 16px;
+        font-weight: 500;
+        gap:0px;
+    }
+    .star-coin {
+        width: 24px;
+    }
+    .profile {
+        width: 28px;
+        height: fit-content;
+        top:15px;
+    }
+}
