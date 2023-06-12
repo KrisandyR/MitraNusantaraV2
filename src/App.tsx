@@ -1,39 +1,49 @@
-import React from "react";
-import "./App.css";
-import { BrowserRouter, Route, Switch } from "react-router-dom";
-import Home from "./component/home/Home";
-import MyProduct from "./component/my_product/MyProduct";
-import NavbarStoregg from "./component/navbar_storegg/NavbarStoregg";
-import ProductDetail from "./component/product_detail/ProductDetail";
-import Minigame from "./component/minigame/Minigame";
-import MyProductDetail from "./component/my_product_detail/MyProductDetail";
+import React from 'react';
+import logo from './logo.svg';
+import './App.scss';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import Login from './view/login';
+import Example from './view/example/Example';
+import NavigationBar from './component';
+import Home from './view/home';
+import Packet from './view/packet-remove-later';
+import RecommendationPage from './view/recommendation_page';
+import SearchPage from './view/search_page/SearchPage';
+import ProductDetail from './view/product_detail/ProductDetail';
 
 function App() {
-
   return (
     <div>
-      <BrowserRouter>
-        <NavbarStoregg />
-        <Switch>
-          <Route path={"/"} exact>
-            <Home />
-          </Route>
-          <Route path={"/product:id"} exact>
-            <Home />
-            <ProductDetail />
-          </Route>
-          <Route path={"/my-product"} exact>
-            <MyProduct />
-          </Route>
-          <Route path={"/my-product:id"} exact>
-            <MyProduct />
-            <MyProductDetail />
-          </Route>
-          <Route path={"/minigame"} exact>
-            <Minigame />
-          </Route>
-        </Switch>
-      </BrowserRouter>
+    <BrowserRouter>
+      <Switch>
+        <Route path={"/"} exact>
+          <NavigationBar />
+          <Home />
+        </Route>
+        <Route path={"/packet"}>
+          <NavigationBar />
+          <Packet />
+        </Route>
+        <Route path={"/recomPage"} exact>
+          <NavigationBar />
+          <RecommendationPage/>
+        </Route>
+        <Route path={"/search:keyword?"}>
+          <NavigationBar/>
+          <SearchPage/>
+        </Route>
+        <Route path={"/hotel/:hotelId"}>
+          <NavigationBar/>
+          <ProductDetail/>
+        </Route>
+        <Route path={"/login"} exact>
+          <Login/>
+        </Route>
+        {/* <Route path={"/example"} exact>
+          <Example />
+        </Route> */}
+      </Switch>
+    </BrowserRouter>
     </div>
   );
 }

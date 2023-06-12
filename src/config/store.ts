@@ -1,9 +1,7 @@
 import {createStore, combineReducers} from 'redux';
 import storage from "redux-persist/lib/storage";
 import { persistReducer } from "redux-persist";
-import balanceReducer from './balanceReducer';
-import myProductReducer from './myProductReducer';
-import transactionIdReducer from './transactionIdReducer';
+import authReducer from '../redux/auth.reducer';
 
 const persistConfig = {
     key: "root",
@@ -12,9 +10,7 @@ const persistConfig = {
 }
 
 const reducerList = combineReducers({
-    balance: balanceReducer,
-    myProduct: myProductReducer,
-    transactionId: transactionIdReducer
+    auth: authReducer
 })
 
 const persistedReducer = persistReducer(persistConfig, reducerList)

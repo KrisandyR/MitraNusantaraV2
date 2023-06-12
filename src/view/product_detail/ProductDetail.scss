@@ -1,0 +1,41 @@
+.prod-detail-page {
+    font-family: 'Poppins', sans-serif;
+    padding: 60px 350px;
+    background-color: #F4F6F8;
+    min-height: calc(100vh - 95px);
+}
+
+.rooms-loading-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.rooms-loading-img {
+    border-radius: 20px !important;
+    width: 700px;
+    height: 450px;
+    object-fit: cover;
+}
+
+.hotel-wrapper {
+    display: flex;
+}
+
+.hotel-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    margin-left: 60px;
+    width: calc(100% - 700px - 60px);
+}
+
+.hotel-divider {
+    margin-top: 20px !important;
+    margin-bottom: 20px !important;
+}
+
+.hotel-address {
+    font-size: 16px;
+    color: #6f7479;
+}
+
