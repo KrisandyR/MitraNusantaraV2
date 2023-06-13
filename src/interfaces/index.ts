@@ -31,4 +31,19 @@ export declare interface IHotelRoom {
     images: string[]
 }
 
+export declare interface ICart {
+    hotelId: string,
+    hotelName: string,
+    startDate: Date,
+    endDate: Date,
+    room: ICartRoom[]
+}
+
+export declare interface ICartRoom {
+    roomId: string,
+    roomName: string,
+    roomPrice: number,
+    dayOrNight: number
+}
+
 

@@ -10,6 +10,7 @@ const Example = () => {
   const b = useSelector(authSelector);
 
   console.log(b.isLoggedIn)
+  console.log(b.userId)
 
   // if(!b){
   //   console.log("undefined")
@@ -20,6 +21,7 @@ const Example = () => {
       <p>aaaaaaa</p>
       <br/>
       <p>{b.status}</p>
+      <p>{b.userId}</p>
       <br/>
     </div>
   )

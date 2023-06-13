@@ -24,7 +24,7 @@ const Login = () => {
         await setError("");
         await setEmail("");
         await setPassword("");
-        await dispatch(login());
+        await dispatch(login(res.data.user.userId));
         history.push("/");
       } else if (res.status === 404){
         setError("User not found !");

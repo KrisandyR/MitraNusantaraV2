@@ -3,11 +3,20 @@ import "./ProductCard.scss";
 import { IHotel } from "../../interfaces";
 import { Card, Image } from "react-bootstrap";
 import star from "../../assets/star.png";
+import { useHistory } from "react-router-dom";
+
+
 
 const ProductCard = (prod: IHotel) => {
+
+  const history = useHistory();
+  const handleClick = () => {
+    history.push(`hotel/${prod.hotelId}`)
+  }
+
   return (
     <Fragment>
-      <Card className="prod-card-wrapper">
+      <Card className="prod-card-wrapper" onClick={handleClick}>
         <img src={prod.images[0]} alt="prod-img" className="prod-img" />
         <div className="prod-info-wrapper">
           <div>

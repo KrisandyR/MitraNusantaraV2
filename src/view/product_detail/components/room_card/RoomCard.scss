@@ -1,0 +1,75 @@
+.room-card-wrapper {
+    margin: 0px;
+    margin-top: 50px;
+    background-color: #ffffff;
+    max-width: 100%;
+    display: flex !important;
+    flex-direction: row !important;
+    height: 200px !important;
+    border: none !important;
+}
+
+.room-indv-img {
+    border-radius: 5px !important;
+    width: 350px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.room-card-detail-wrapper {
+    width: calc(100% - 350px);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.room-card-info-wrapper {
+    width: calc(100% - 250px);
+    padding: 20px 30px;
+}
+
+.room-card-price-wrapper {
+    width: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    text-align: right;
+    flex-direction: column;
+    padding-right: 50px;
+}
+
+.room-card-price {
+    color: #318CE7;
+    font-weight: 600;
+    font-size: 28px;
+    margin: 0px;
+}
+
+.room-card-price-desc {
+    margin-top: -10px !important;
+    color: #696969;
+    margin: 0px;
+}
+
+.room-divider {
+    margin: 10px 0px;
+}
+
+.room-capacity-wrapper {
+    gap: 20px;
+}
+
+.capacity-text {
+    color: #696969;
+    font-size: 14px !important;
+    margin: 0px;
+    margin-left: 5px !important;
+    margin-top: 1px !important;
+}
+
+.room-facility-container {
+    margin-left: -10px;
+    font-size: 14px;
+    display: flex;
+}
+

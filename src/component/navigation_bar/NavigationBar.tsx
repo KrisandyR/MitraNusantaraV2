@@ -4,6 +4,8 @@ import hamburgericon from "../../assets/hamburger.png";
 import "./NavigationBar.scss";
 import { Collapse } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { login, logout, authSelector } from "../../redux/auth.reducer";
 
 const useWindowSize = () => {
   // Initialize state with undefined width/height so server and client renders match
@@ -34,6 +36,8 @@ const useWindowSize = () => {
 
 const NavigationBar = () => {
   const [dropdownIsOpen, setDropdownIsOpen] = useState(false);
+  const auth = useSelector(authSelector);
+  const dispatch = useDispatch();
   const windowSize = useWindowSize();
 
   return (
@@ -51,11 +55,41 @@ const NavigationBar = () => {
             <Link to={"/"} style={{ textDecoration: "none", color: "black" }}>
               <div className="px-4">Home</div>
             </Link>
-            <div className="px-4">About Us</div>
-            <div className="px-4">Booking</div>
-            <Link to={"/login"} style={{ textDecoration: "none"}}>
-              <div className="px-4 py-2 mx-2 navbar-login-btn">Login</div>
+            <Link
+              to={"/search"}
+              style={{ textDecoration: "none", color: "black" }}
+            >
+              <div className="px-4">Product</div>
             </Link>
+            {auth.isLoggedIn && (
+              <Fragment>
+                <Link
+                  to={"/cart"}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <div className="px-4">Cart</div>
+                </Link>
+                <Link
+                  to={"/history"}
+                  style={{ textDecoration: "none", color: "black" }}
+                >
+                  <div className="px-4">History</div>
+                </Link>
+                <div
+                  className="px-4 py-2 mx-2 navbar-login-btn"
+                  onClick={() => {
+                    dispatch(logout());
+                  }}
+                >
+                  Logout
+                </div>
+              </Fragment>
+            )}
+            {!auth.isLoggedIn && (
+              <Link to={"/login"} style={{ textDecoration: "none" }}>
+                <div className="px-4 py-2 mx-2 navbar-login-btn">Login</div>
+              </Link>
+            )}
           </div>
         )}
 
@@ -80,9 +114,13 @@ const NavigationBar = () => {
                     <p className="navbar-dropdown-item m-0">Home</p>
                   </Link>
 
-                  <p className="navbar-dropdown-item m-0">About Us</p>
-                  <p className="navbar-dropdown-item m-0">Booking</p>
-                  <p className="navbar-dropdown-item m-0">Login</p>
+                  <Link
+                    to={"/search"}
+                    style={{ textDecoration: "none", color: "white" }}
+                  >
+                    {" "}
+                    <p className="navbar-dropdown-item m-0">Product</p>
+                  </Link>
                 </div>
 
                 {/* Outer area for navbar */}

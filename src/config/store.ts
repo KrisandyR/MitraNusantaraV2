@@ -5,7 +5,7 @@ import authReducer from '../redux/auth.reducer';
 
 const persistConfig = {
     key: "root",
-    version: 1,
+    version: 2,
     storage
 }
 

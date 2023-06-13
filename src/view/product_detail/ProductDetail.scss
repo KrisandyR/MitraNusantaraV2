@@ -1,7 +1,7 @@
 .prod-detail-page {
     font-family: 'Poppins', sans-serif;
     padding: 60px 350px;
-    background-color: #F4F6F8;
+    background-color: #E6EAED;
     min-height: calc(100vh - 95px);
 }
 
@@ -39,3 +39,52 @@
     color: #6f7479;
 }
 
+.input-qty-wrapper {
+    margin-top: 15px;
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+}
+
+.input-qty-container {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    width: 150px;
+}
+
+.hotel-date-row {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.hotel-cart-row {
+    margin-top: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.hotel-date-input {
+    margin: 0px 15px;
+    width: 250px;
+}
+
+.add-cart-btn {
+    padding: 10px 20px !important;
+    background-color: #318ce7 !important;
+    color: #ffffff !important;
+    font-size: 24px !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.add-cart-btn:hover{
+    background-color: #0860b9 !important;
+}
+
+.add-cart-warning {
+    color: rgb(217, 58, 58);
+}

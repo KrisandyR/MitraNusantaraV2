@@ -1,0 +1,44 @@
+.cart-main-page {
+    font-family: 'Poppins', sans-serif;
+    padding: 60px 350px;
+    background-color: #E6EAED;
+    min-height: calc(100vh - 95px);
+}
+
+.cart-title {
+    margin-bottom: 20px;
+}
+
+.cart-item-card {
+    padding: 20px 50px !important;
+}
+.cart-title-name {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 5px !important;
+}
+
+.cart-total {
+    text-align: right;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.purchase-btn {
+    margin-top: 7px;
+    margin-bottom: 30px;
+    background-color: #318ce7 !important;
+    color: #ffffff !important;
+    font-size: 20px !important;
+    transition: background-color 0.3s ease !important;
+}
+
+.purchase-btn:hover{
+    background-color: #0860b9 !important;
+}
+
+.purchase-btn-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}

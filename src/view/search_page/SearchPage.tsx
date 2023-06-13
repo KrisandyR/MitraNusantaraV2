@@ -87,7 +87,6 @@ const SearchPage = () => {
         console.error(error);
       }
     };
-
     fetchData();
   }, [
     filter.attractionTypeCategory,
@@ -100,6 +99,8 @@ const SearchPage = () => {
   ]);
 
   useEffect(() => {
+    console.log(filteredData)
+    console.log("out")
     setIsLoading(false);
   }, [filteredData])
 
@@ -300,6 +301,7 @@ const SearchPage = () => {
                   attractionTypeCategory={prod.attractionTypeCategory}
                   facilities={prod.facilities}
                   hotelStar={prod.hotelStar}
+
                 />
               );
             })}
